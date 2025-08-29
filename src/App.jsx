@@ -5,7 +5,7 @@ import QRCode from 'react-qr-code';
 import DotGrid from './DotGrid';
 
 const links = [
-  { text: 'Portfolio Website', href: 'https://skaltamashportfolio.netlify.app/', icon: <FaGlobe /> },
+  { text: 'Portfolio Website', href: 'https://iamsk.netlify.app/', icon: <FaGlobe /> },
   { text: 'GitHub', href: 'https://github.com/SkAltmash', icon: <FaGithub /> },
   { text: 'LinkedIn', href: 'https://linkedin.com/in/altamash-sheikh-1ba6a72aa', icon: <FaLinkedin /> },
   { text: 'Email Me', href: 'mailto:skaltmash3@gmail.com', icon: <FaEnvelope /> },

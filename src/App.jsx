@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe } from 'react-icons/fa';
+// 1. Added FaInstagram to the imports
+import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe, FaInstagram } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import QRCode from 'react-qr-code';
 
@@ -7,8 +8,7 @@ import QRCode from 'react-qr-code';
 const personalInfo = {
   name: "Sk Altamash",
   tagline: "Developer of ARQ Marketing",
-  // tagline: "Full-Stack Developer • React | Node.js | MongoDB", // Alternative tagline
-  avatarSrc: "/img.png", // Ensure this path is correct in your project
+  avatarSrc: "/img.png", 
   portfolioUrl: "https://iamsk.netlify.app/",
 };
 
@@ -19,6 +19,11 @@ const primaryLink = {
 };
 
 const links = [
+    { 
+    text: "Instagram", 
+    href: "https://www.instagram.com/arq_marketing_official?igsh=MW9rNHE1MXRueHFxYQ==", 
+    icon: <FaInstagram /> 
+  },
   { text: "GitHub", href: "https://github.com/SkAltmash", icon: <FaGithub /> },
   { text: "LinkedIn", href: "https://linkedin.com/in/altamash-sheikh-1ba6a72aa", icon: <FaLinkedin /> },
   { text: "Email Me", href: "mailto:skaltmash3@gmail.com", icon: <FaEnvelope /> },
@@ -87,6 +92,10 @@ export default function App() {
           {/* The heavy gradient glow matching the image */}
           <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-blue-700 via-indigo-500 to-cyan-400 opacity-50 blur-3xl group-hover:opacity-75 transition duration-1000 animate-pulse-slow"></div>
           
+          {/* Avatar Image container (Add your image here) */}
+          {/* <div className="relative w-32 h-32 rounded-full overflow-hidden border-2 border-white/20 shadow-2xl z-10">
+             <img src={personalInfo.avatarSrc} alt="Avatar" className="object-cover w-full h-full" />
+          </div> */}
 
         </motion.div>
 
@@ -102,8 +111,6 @@ export default function App() {
           <h2 className="text-xl md:text-2xl text-blue-100/90 font-medium tracking-wide">
             {personalInfo.tagline}
           </h2>
-          {/* Optional extra info */}
-          {/* <p className="text-sm text-cyan-200/60 mt-2 tracking-wider uppercase">Full-Stack Developer</p> */}
         </motion.div>
 
         {/* --- Primary CTA (Portfolio) --- */}
